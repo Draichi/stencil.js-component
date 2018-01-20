@@ -17,15 +17,16 @@
   <link rel="manifest" href="/manifest.json">
 </head>
 <body>
+  <button>Open Modal</button>
+  <my-modal-bundle title="IInfo" content="LOREMLOREM LOREM Lorenrekrjne"></my-modal-bundle>
 
-  <my-app></my-app>
-
-  <style>
-    body {
-      margin: 0px;
-      padding: 0px;
-      font-family: sans-serif;
-    }
-  </style>
+  <script>
+    var btn = document.querySelector('button');
+    var modal = document.querySelector('my-modal-bundle');
+    btn.addEventListener('click', function(){
+      // modal.style.display = 'block';
+      modal.open();
+    });
+  </script>
 </body>
 </html>

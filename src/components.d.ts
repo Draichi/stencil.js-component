@@ -4,36 +4,31 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
-import '@stencil/router';
 
 import {
-  MatchResults,
-} from '@stencil/router';
-
-import {
-  AppHome as AppHome
-} from './components/app-home/app-home';
+  MyBackdrop as MyBackdrop
+} from './components/my-backdrop/my-backdrop';
 
 declare global {
-  interface HTMLAppHomeElement extends AppHome, HTMLElement {
+  interface HTMLMyBackdropElement extends MyBackdrop, HTMLElement {
   }
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+  var HTMLMyBackdropElement: {
+    prototype: HTMLMyBackdropElement;
+    new (): HTMLMyBackdropElement;
   };
   interface HTMLElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    "my-backdrop": HTMLMyBackdropElement;
   }
   interface ElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    "my-backdrop": HTMLMyBackdropElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-home": JSXElements.AppHomeAttributes;
+      "my-backdrop": JSXElements.MyBackdropAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppHomeAttributes extends HTMLAttributes {
+    export interface MyBackdropAttributes extends HTMLAttributes {
       
     }
   }
@@ -41,61 +36,62 @@ declare global {
 
 
 import {
-  AppProfile as AppProfile
-} from './components/app-profile/app-profile';
+  MyModalBundle as MyModalBundle
+} from './components/my-modal-bundle/my-modal-bundle';
 
 declare global {
-  interface HTMLAppProfileElement extends AppProfile, HTMLElement {
+  interface HTMLMyModalBundleElement extends MyModalBundle, HTMLElement {
   }
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
+  var HTMLMyModalBundleElement: {
+    prototype: HTMLMyModalBundleElement;
+    new (): HTMLMyModalBundleElement;
   };
   interface HTMLElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
+    "my-modal-bundle": HTMLMyModalBundleElement;
   }
   interface ElementTagNameMap {
-    "app-profile": HTMLAppProfileElement;
+    "my-modal-bundle": HTMLMyModalBundleElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-profile": JSXElements.AppProfileAttributes;
+      "my-modal-bundle": JSXElements.MyModalBundleAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
-      
-        match?: MatchResults
+    export interface MyModalBundleAttributes extends HTMLAttributes {
+      content?: string;
+      title?: string;
     }
   }
 }
 
 
 import {
-  MyApp as MyApp
-} from './components/my-app/my-app';
+  MyModal as MyModal
+} from './components/my-modal/my-modal';
 
 declare global {
-  interface HTMLMyAppElement extends MyApp, HTMLElement {
+  interface HTMLMyModalElement extends MyModal, HTMLElement {
   }
-  var HTMLMyAppElement: {
-    prototype: HTMLMyAppElement;
-    new (): HTMLMyAppElement;
+  var HTMLMyModalElement: {
+    prototype: HTMLMyModalElement;
+    new (): HTMLMyModalElement;
   };
   interface HTMLElementTagNameMap {
-    "my-app": HTMLMyAppElement;
+    "my-modal": HTMLMyModalElement;
   }
   interface ElementTagNameMap {
-    "my-app": HTMLMyAppElement;
+    "my-modal": HTMLMyModalElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-app": JSXElements.MyAppAttributes;
+      "my-modal": JSXElements.MyModalAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyAppAttributes extends HTMLAttributes {
-      
+    export interface MyModalAttributes extends HTMLAttributes {
+      content?: string;
+      title?: string;
     }
   }
 }
